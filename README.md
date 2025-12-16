@@ -30,6 +30,7 @@ Docker is an open-source platform that simplifies the process of building, deplo
 
 ## Creating Dockerfile
 - A Dockerfile is a file used in Docker to create and configure containers. There are many ways to create a Dockerfile; if you want to learn more about how to create a Dockerfile, you can check the [Dockerfile reference](https://docs.docker.com/reference/dockerfile/).
+- Make sure your file is named something like `compose.yaml` so it wont work properly
 - Throughout my experience setting up the server, my Docker file ended up looking like this.
 ```
 services:
@@ -95,8 +96,24 @@ environment:
 volumes:
   KKKata:
 ```
-- KKKata is the name of the volume; you can name it whatever you want. It will be created right when you do `Docker Compose`. Our next step
+- KKKata is the name of the volume; you can name it whatever you want. It will be created right when you do `Docker Compose`. Our next step.
 # Step 3: Open the server🕺
+- To be able to start the server whenever you want, you can mount it in a Docker container, so let's write the first command.
+- Open docker.
+- Open terminal and search in wich directory your file is, your can travel trough with `cd`.
+- Once you are on the samne directory enter the command `Docker compose up -d`.
+---
+***
+---
+![McDockerCode](McrandomCode.png)
+- Now you will see a lot of commands and code running but dony worry what you actually need to see is the final message.
+`[Server thread/INFO] [minecraft/DedicatedServer]: Done (11.656s)! For help, type "help"`
+- This effectively means that it is powered on and has successfully started. You can verify on your PC that it is consuming resources and that you have a Minecraft server running on your pc.
+- you can connect to your server using your own pc ip address but none of your friends will.
+- So we need a public address to let people connecting to our server, this is called a bridge(between your ip and a public one).
+- In my case i used playit.gg but you can use wichever you want, playit is a really easy to use, make an account, select minecraft server and install the client.
+- then you open playit and the ip that shows will be the one you will use to connect to the server.
 
-> **Work in progress!!!**
-☠
+  
+
+
